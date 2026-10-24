@@ -1,0 +1,387 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jinja — Source of the Nile — HAK Tours & Travel</title>
+  <meta name="description" content="Discover Jinja — the adventure capital of East Africa and the historic source of the River Nile. White-water rafting, bungee jumping, kayaking, and boat rides await.">
+  <link rel="icon" href="images/logo x.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="destination.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="main-header" class="site-header">
+    
+    <!-- Top Contact Bar -->
+    <div class="top-contact-bar">
+      <div class="top-bar-container">
+        <div class="top-contact-info">
+          <a href="tel:+256755899925" class="top-contact-item"><i class="fa-solid fa-phone"></i> +256 755899925 / 0782413933</a>
+          <a href="mailto:info@hakstoursandtravel.com" class="top-contact-item top-email-item"><i class="fa-solid fa-envelope"></i> info@hakstoursandtravel.com</a>
+        </div>
+        <div class="top-social-links">
+          <a href="mailto:info@hakstoursandtravel.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <div class="main-navbar-bar">
+      <div class="main-navbar-container">
+        <!-- Logo Container -->
+        <div id="logo-container" class="header-logo-container">
+          <a href="index.html" class="header-logo-link">
+            <img src="images/logo x.png" alt="Horizon Tours and Travel Logo" class="site-logo brand-logo" id="site-logo" loading="eager">
+          </a>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav id="main-nav" class="navigation-menu">
+                    <ul class="nav-links-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                        
+                        <!-- Safaris Dropdown -->
+                        <li class="nav-item nav-item-dropdown nav-item-safaris">
+                            <a href="safaris.html" class="nav-link">Safaris <i class="fa-solid fa-chevron-down nav-dropdown-arrow"></i></a>
+                            <div class="safaris-dropdown-menu">
+                                <div class="safaris-dropdown-grid">
+                                    <div class="dropdown-country-col" data-country="uganda">
+                                        <div class="dropdown-country-heading"><span class="country-title">UGANDA</span></div>
+                                        <ul class="dropdown-package-list uganda-package-list">
+                                            <li><a href="5-days-uganda-kibale-and-bwindi-impenetrable-national-parks-tour-from-entebbe-to-kigali.html" class="dropdown-package-link">5 Days Uganda Kibale and Bwindi Impenetrable National Parks Tour from Entebbe to Kigali</a></li>
+                                            <li><a href="3-day-uganda-gorilla-trekking.html" class="dropdown-package-link">3 Day Uganda Gorilla Trekking</a></li>
+                                            <li><a href="11-days-best-of-uganda-safari.html" class="dropdown-package-link">11 Days Best of Uganda Safari</a></li>
+                                            <li><a href="3-day-murchison-falls-safari.html" class="dropdown-package-link">3 Day Murchison Safari</a></li>
+                                            <li><a href="4-day-queen-elizabeth-safari.html" class="dropdown-package-link">4 Day Queen Elizabeth Safari</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown-country-col" data-country="rwanda">
+                                        <div class="dropdown-country-heading"><span class="country-title">RWANDA</span></div>
+                                        <ul class="dropdown-package-list rwanda-package-list">
+                                            <li><a href="10-days-rwanda-wildlife-and-great-apes-safari.html" class="dropdown-package-link">10 Days Rwanda Wildlife and Great Apes Safari</a></li>
+                                            <li><a href="5-day-gorilla-rwanda.html" class="dropdown-package-link">5 Day Gorilla Rwanda</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="safaris-dropdown-footer">
+                                    <a href="safaris.html" class="dropdown-view-more-link">VIEW MORE</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Gorilla Trekking Link -->
+                        <li class="nav-item">
+                            <a href="gorilla-trekking.html" class="nav-link">Gorilla Trekking</a>
+                        </li>
+
+                        <!-- Destinations Dropdown -->
+                        <li class="nav-item nav-item-dropdown nav-item-destinations">
+                            <a href="destinations.html" class="nav-link active">Destinations <i class="fa-solid fa-chevron-down nav-dropdown-arrow"></i></a>
+                            <div class="destinations-dropdown-menu">
+                                <ul class="dropdown-simple-list">
+                                    <li><a href="uganda-destinations.html" class="dropdown-simple-link">Uganda Destinations</a></li>
+                                    <li><a href="rwanda-destinations.html" class="dropdown-simple-link">Rwanda Destinations</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+
+        <!-- Header Actions (Inquire) -->
+        <div class="header-actions">
+          <a href="contact.html" class="nav-inquire-btn">INQUIRE NOW</a>
+        </div>
+
+        <!-- Hamburger Menu Button -->
+        <div class="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- 1. HERO -->
+  <section class="dest-hero">
+    <img src="images/rafting.jpg" alt="Source of the Nile at Jinja" class="dest-hero-img" loading="eager">
+    <div class="dest-hero-overlay"></div>
+    <div class="dest-hero-content">
+      <nav class="dest-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span>›</span>
+        <a href="destinations.html">Destinations</a><span>›</span>
+        <span>Jinja — Source of the Nile</span>
+      </nav>
+      <h1 class="dest-hero-title">Jinja — Source of the Nile</h1>
+      <p class="dest-hero-subtitle">The Adventure Capital of East Africa — Where the World's Longest River Is Born</p>
+      <a href="safaris.html" class="btn-hero-book"><i class="fa-solid fa-compass"></i> Plan Your Safari</a>
+    </div>
+  </section>
+
+  <div class="back-bar">
+    <a href="destinations.html"><i class="fa-solid fa-arrow-left"></i> Back to Destinations</a>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- 2. EDITORIAL ARTICLE & SHOWCASE                -->
+  <!-- ============================================== -->
+  <section class="dest-body-section">
+    <div class="dest-layout">
+
+      <article class="dest-article">
+        <!-- Short Introduction -->
+        <p class="dest-intro">
+          Jinja is Uganda's undisputed adventure capital — a vibrant riverside haven on the northern shores of Lake Victoria where the world's longest river begins its epic 6,853 km journey northward. Here, the historical mystique of the Source of the Nile converges with world-renowned Grade V white-water rafting, daring bungee jumps, and serene sunset river cruises.
+        </p>
+
+        <!-- Destination Images Showcase (Max 2 Curated Visuals) -->
+        <div class="dest-image-showcase">
+          <div class="showcase-grid-2">
+            <div class="showcase-card">
+              <img src="images/rafting.jpg" alt="White-water rafting on the Victoria Nile in Jinja" loading="lazy">
+              <div class="showcase-caption">
+                <strong>World-Class White-Water Rafting</strong> — Conquering legendary Grade V rapids on the Nile
+              </div>
+            </div>
+            <div class="showcase-card">
+              <img src="images/BungeeJinja.jpg" alt="Bungee jumping directly over the Nile in Jinja" loading="lazy">
+              <div class="showcase-caption">
+                <strong>Nile High Bungee</strong> — 44-metre plunge directly above the rushing waters
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ====== START ARTICLE CONTENT ====== -->
+        <div class="article-body">
+
+          <!-- About the Destination -->
+          <h2>About Jinja — The Source of the Nile</h2>
+          <p>
+            Jinja sits at one of the world's most historically celebrated geographical landmarks: the northern outlet of Lake Victoria, where Africa's largest lake gives birth to the majestic White Nile. The exact source was identified here by British explorer John Hanning Speke in 1862, solving the millennia-old riddle of where the Nile begins.
+          </p>
+          <p>
+            Today, Jinja is East Africa's leading outdoor adrenaline hub. Lined with colonial architecture, lively artisan cafes, and luxury riverside eco-resorts, it is a spirited destination where high-octane river adventures blend effortlessly with relaxed tropical hospitality.
+          </p>
+
+          <div class="highlight-note">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>The River Nile stretches 6,853 km from its origin here at Lake Victoria all the way to the Mediterranean Sea in Egypt. Every drop starts right here in Jinja.</span>
+          </div>
+
+          <h2>White-Water Rafting — A Global Bucket-List Adventure</h2>
+          <p>
+            Rafting the Victoria Nile in Jinja is consistently ranked among the top five day-rafting expeditions on the planet. The full-day descent plunges through thunderous Grade IV and Grade V rapids — including the legendary Bujagali, Itanda Falls, and the adrenaline-pumping "Silverback" rapid — punctuated by gentle pools where rafters drift under lush riparian canopies.
+          </p>
+          <p>
+            Whether opting for extreme Grade V adrenaline surges or family-friendly scenic floats, daily departures run with internationally certified river guides, rigorous safety standards, and support safety kayakers on every rapid.
+          </p>
+
+          <blockquote>
+            "Rafting the Nile at Jinja is an experience that makes your pulse race, your breath catch, and leaves an exhilarated grin on your face for days."
+          </blockquote>
+
+          <h2>Nile Bungee &amp; River Sports</h2>
+          <p>
+            For extreme thrill-seekers, the Nile High Bungee tower provides a heart-stopping 44-metre plunge directly above the churning river. Divers can choose an ankle tie to dip their hands or head into the cool waters of the Nile at the bottom of the drop before rebounding smoothly into the sky.
+          </p>
+          <p>
+            Beyond the rapids, the calmer upper stretches of the Nile provide idyllic waters for stand-up paddleboarding (SUP), flatwater kayaking, horse riding along lush river trails, and quad biking through local village paths.
+          </p>
+
+          <!-- What You Can Experience -->
+          <div class="experience-section">
+            <h2>What You Can Experience</h2>
+            <p>From high-octane river rapids to tranquil sunset cruises, Jinja delivers an exhilarating palette of experiences:</p>
+
+            <ul class="experience-list">
+              <li class="experience-item">
+                <div class="experience-icon"><i class="fa-solid fa-water"></i></div>
+                <div class="experience-content">
+                  <h4>White-Water Rafting on the Nile</h4>
+                  <p>Tackle world-famous Grade IV and Grade V rapids on the Victoria Nile with certified river safety teams.</p>
+                </div>
+              </li>
+              <li class="experience-item">
+                <div class="experience-icon"><i class="fa-solid fa-arrow-down"></i></div>
+                <div class="experience-content">
+                  <h4>Nile High Bungee Jump (44m)</h4>
+                  <p>Take an adrenaline leap from a cliffside tower directly above the roaring Nile, with the option to touch the water.</p>
+                </div>
+              </li>
+              <li class="experience-item">
+                <div class="experience-icon"><i class="fa-solid fa-ship"></i></div>
+                <div class="experience-content">
+                  <h4>Historic Source of the Nile Boat Cruise</h4>
+                  <p>Take a scenic wooden motorboat to the exact point where the Nile bubbles up from Lake Victoria, surrounded by waterbirds.</p>
+                </div>
+              </li>
+              <li class="experience-item">
+                <div class="experience-icon"><i class="fa-solid fa-person-swimming"></i></div>
+                <div class="experience-content">
+                  <h4>Kayaking, SUP &amp; River Tubing</h4>
+                  <p>Paddle calm stretches of the upper river past papyrus wetlands, kingfishers, and monitor lizards on peaceful eco-tours.</p>
+                </div>
+              </li>
+              <li class="experience-item">
+                <div class="experience-icon"><i class="fa-solid fa-horse"></i></div>
+                <div class="experience-content">
+                  <h4>Riverside Horseback Safaris</h4>
+                  <p>Enjoy guided horseback riding through rural farmland, local fishing villages, and tranquil banks along the Victoria Nile.</p>
+                </div>
+              </li>
+              <li class="experience-item">
+                <div class="experience-icon"><i class="fa-solid fa-compass"></i></div>
+                <div class="experience-content">
+                  <h4>Equator Crossing &amp; Town Heritage</h4>
+                  <p>Stop at the equator monument in Kayabwe for the Coriolis water demonstration and explore Jinja's vibrant craft markets.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Best Time to Visit -->
+          <h2>Best Time to Visit</h2>
+          <p>
+            Jinja is an exceptional year-round destination. Because the Nile's flow is regulated by the Lake Victoria basin, white-water rafting, bungee jumping, and river cruises run every day of the year. The dry seasons (<strong>June to August</strong> and <strong>December to February</strong>) offer clear blue skies and optimal sunshine for outdoor activities.
+          </p>
+
+          <!-- Getting There -->
+          <h2>Getting There</h2>
+          <p>
+            Jinja is located approximately 80 km east of Kampala. The drive takes 1.5 to 2.5 hours along the main highway, crossing the picturesque Mabira Forest and lush sugarcane estates. Jinja is the easiest destination to reach from the capital, making it ideal as a thrilling weekend getaway or the perfect start/finish to a longer wildlife safari.
+          </p>
+
+          <!-- Why Visit Highlight Box -->
+          <div class="why-visit-highlight">
+            <h3><i class="fa-solid fa-gem"></i> Why Visit Jinja?</h3>
+            <p>
+              Where history and adventure collide — stand where Speke discovered the birth of the Nile, then plunge into world-class rapids or soar above the river on a bungee cord before relaxing with a sunset cocktail on the water.
+            </p>
+            <ul class="why-visit-points">
+              <li class="why-point-item"><i class="fa-solid fa-check"></i> Undisputed adventure capital of East Africa</li>
+              <li class="why-point-item"><i class="fa-solid fa-check"></i> The historic, world-renowned Source of the River Nile</li>
+              <li class="why-point-item"><i class="fa-solid fa-check"></i> World-class Grade V white-water rafting and 44m bungee</li>
+              <li class="why-point-item"><i class="fa-solid fa-check"></i> Convenient 2-hour accessibility from Kampala and Entebbe</li>
+            </ul>
+          </div>
+
+          <!-- Quick Facts -->
+          <div class="quick-facts-section">
+            <div class="quick-facts-panel">
+              <div class="quick-fact-item">
+                <span class="quick-fact-label">Location</span>
+                <span class="quick-fact-value">Eastern Uganda (Jinja)</span>
+              </div>
+              <div class="quick-fact-item">
+                <span class="quick-fact-label">Best Time</span>
+                <span class="quick-fact-value">Year-Round</span>
+              </div>
+              <div class="quick-fact-item">
+                <span class="quick-fact-label">Main Activity</span>
+                <span class="quick-fact-value">Rafting &amp; Bungee</span>
+              </div>
+              <div class="quick-fact-item">
+                <span class="quick-fact-label">Recommended Stay</span>
+                <span class="quick-fact-value">1–2 Days</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- ====== END ARTICLE CONTENT ====== -->
+      </article>
+
+    </div>
+  </section>
+
+  <!-- 9. FAQ -->
+  <section class="dest-faq-section">
+    <div class="dest-section-title"><h2>Frequently Asked Questions</h2><p>Planning your Jinja adventure</p></div>
+    <ul class="faq-list">
+      <li class="faq-item">
+        <button class="faq-question">Is white-water rafting safe at Jinja?<span class="faq-icon"><i class="fa-solid fa-plus"></i></span></button>
+        <div class="faq-answer"><p>Yes — Jinja's rafting operators maintain excellent safety standards with experienced, fully certified guides, top-quality equipment, and comprehensive safety briefings. The activity is suitable for non-swimmers with the right precautions. HAK Tours works exclusively with the safest and most reputable operators on the river.</p></div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-question">How far is Jinja from Kampala?<span class="faq-icon"><i class="fa-solid fa-plus"></i></span></button>
+        <div class="faq-answer"><p>Jinja is approximately 80 km east of Kampala — normally a 1.5 to 2 hour drive depending on traffic. HAK Tours provides comfortable transfers from Kampala to Jinja as part of any adventure package.</p></div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-question">What is the minimum age for rafting and bungee?<span class="faq-icon"><i class="fa-solid fa-plus"></i></span></button>
+        <div class="faq-answer"><p>For white-water rafting, the minimum age is typically 15 years (with parental consent). For bungee jumping, the minimum age is 18 years. Family-friendly options including calm boat cruises and kayaking are available for younger children.</p></div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-question">Can Jinja be combined with a wildlife safari?<span class="faq-icon"><i class="fa-solid fa-plus"></i></span></button>
+        <div class="faq-answer"><p>Absolutely — Jinja makes an excellent start or end point for a Uganda safari. Many visitors spend 1–2 days at Jinja before or after a wildlife circuit covering Murchison Falls, Kibale, Queen Elizabeth, and Bwindi. HAK Tours designs seamless combined itineraries.</p></div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-question">What should I wear for rafting?<span class="faq-icon"><i class="fa-solid fa-plus"></i></span></button>
+        <div class="faq-answer"><p>Wear comfortable swimwear or quick-dry clothing. You will get wet. Secure footwear (like water sandals or trainers that won't come off) is recommended. All safety equipment — helmet, life jacket, and paddle — is provided by the operator. Bring a change of clothes and a towel for afterwards.</p></div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 10. CTA -->
+  <section class="dest-cta-section">
+    <div class="dest-cta-bg" style="background-image: url('images/pic2.jpg');"></div>
+    <div class="dest-cta-overlay"></div>
+    <div class="dest-cta-content">
+      <h2>Ready for the Adventure of Your Life?</h2>
+      <p>Let HAK Tours plan your perfect Jinja adventure — rafting, bungee, cruises, and transfers all arranged for you.</p>
+      <div class="dest-cta-buttons">
+        <a href="safaris.html" class="btn-cta-primary"><i class="fa-solid fa-compass"></i> Plan Your Safari</a>
+        <a href="contact.html" class="btn-cta-secondary"><i class="fa-solid fa-phone"></i> Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. RELATED -->
+  <section class="dest-related-section">
+    <div class="dest-section-title"><h2>Related Destinations</h2><p>Explore more of Uganda's incredible experiences</p></div>
+    <div class="related-grid">
+      <a href="murchison-falls.html" class="related-card"><img src="images/waterfall.jpg" alt="Murchison Falls" loading="lazy"><div class="related-card-overlay"></div><div class="related-card-body"><h4>Murchison Falls</h4><p>The world's most powerful waterfall on the Nile</p><span class="related-card-link">Explore <i class="fa-solid fa-arrow-right"></i></span></div></a>
+      <a href="bwindi.html" class="related-card"><img src="images/gorila.jpg" alt="Bwindi" loading="lazy"><div class="related-card-overlay"></div><div class="related-card-body"><h4>Bwindi Impenetrable Forest</h4><p>Home to half the world's mountain gorillas</p><span class="related-card-link">Explore <i class="fa-solid fa-arrow-right"></i></span></div></a>
+      <a href="queen-elizabeth.html" class="related-card"><img src="images/layan.jpg" alt="Queen Elizabeth NP" loading="lazy"><div class="related-card-overlay"></div><div class="related-card-body"><h4>Queen Elizabeth NP</h4><p>Tree-climbing lions and the Kazinga Channel</p><span class="related-card-link">Explore <i class="fa-solid fa-arrow-right"></i></span></div></a>
+    </div>
+  </section>
+
+  <!-- 12. FOOTER -->
+  <footer id="main-footer" class="site-footer">
+    <div class="footer-brand-header">
+      <a href="index.html" class="footer-logo-link">
+        <img src="images/logo x.png" alt="Horizon Tours and Travel Logo" class="footer-logo" loading="lazy">
+      </a>
+      <h3 class="footer-company-name">Horizon Tours and Travel</h3>
+      <p class="footer-company-info">Kampala, Uganda &nbsp;|&nbsp; Email: <a href="mailto:info@hakstoursandtravel.com">info@hakstoursandtravel.com</a> &nbsp;|&nbsp; Phone: +256 755899925</p>
+    </div>
+    <div class="footer-content-wrapper">
+      <div class="footer-column"><h4 class="footer-column-title">Quick Links</h4><ul class="footer-links"><li><a href="index.html" class="footer-link">Home</a></li><li><a href="about.html" class="footer-link">About Us</a></li><li><a href="safaris.html" class="footer-link">Our Safaris</a></li><li><a href="destinations.html" class="footer-link">Destinations</a></li><li><a href="gallery.html" class="footer-link">Gallery</a></li><li><a href="contact.html" class="footer-link">Contact</a></li></ul></div>
+      <div class="footer-column"><h4 class="footer-column-title">Contact Us</h4><p class="footer-contact-text">Email: info@hakstoursandtravel.com</p><p class="footer-contact-text">Phone: +256 755899925</p><p class="footer-contact-text">Address: Kampala, Uganda</p></div>
+      <div class="footer-column"><h4 class="footer-column-title">Follow Us</h4><ul class="footer-socials"><li><a href="#" class="social-link">Facebook</a></li><li><a href="#" class="social-link">Twitter</a></li><li><a href="#" class="social-link">Instagram</a></li><li><a href="#" class="social-link">YouTube</a></li></ul></div>
+    </div>
+    <div class="footer-bottom-bar"><p class="copyright-text">&copy; 2026 Horizon Tours and Travel. All Rights Reserved.</p></div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <div class="whatsapp-float-wrapper">
+    <a href="https://wa.me/256791111733" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp" aria-label="Chat with Us on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="whatsapp-text">Chat with Us</span>
+    </a>
+  </div>
+  <script src="destination.js"></script>
+</body>
+</html>
+
