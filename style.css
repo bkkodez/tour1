@@ -1,4 +1,4 @@
-/* ================================================================
+﻿/* ================================================================
    Horizon Tours and Travel TOURS AND TRAVEL — PREMIUM SAFARI STYLESHEET
    Brand Refresh: Luxury African Safari
    ================================================================ */
@@ -70,6 +70,8 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -78,8 +80,14 @@ body {
   color: var(--body-text);
   line-height: 1.7;
   overflow-x: hidden;
+  max-width: 100%;
   font-size: 16px;
   padding-top: 110px;
+}
+
+img, video, picture {
+  max-width: 100%;
+  height: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -2382,8 +2390,59 @@ section {
 }
 
 /* ================================================================
-   FORM STYLES (Contact page)
+   FORM STYLES (Contact page & sitewide enquiry)
    ================================================================ */
+.contact-area {
+  padding: 5rem 5%;
+  background: var(--ivory);
+}
+
+.contact-form-wrapper {
+  max-width: 760px;
+  margin: 2.2rem auto 0;
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(30, 58, 52, 0.08);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.4rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group.full-width,
+.form-submit.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-label {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--charcoal);
+}
+
+.required-asterisk {
+  color: #c93b2b;
+}
+
+.whatsapp-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 48px;
+}
+
 .form-control {
   background: var(--white);
   border: 1.5px solid var(--warm-taupe, #CBB89A);
@@ -2391,8 +2450,9 @@ section {
   padding: 0.85rem 1rem;
   color: var(--charcoal);
   font-family: 'Outfit', sans-serif;
-  font-size: 0.97rem;
+  font-size: 1rem;
   width: 100%;
+  min-height: 46px;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -2618,6 +2678,11 @@ a.whatsapp-float {
 
   .hamburger-menu {
     display: flex;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
   }
 
   .nav-links-list {
@@ -2625,11 +2690,14 @@ a.whatsapp-float {
     top: 100%;
     left: 0;
     width: 100%;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     background: #FFFFFF;
     flex-direction: column;
-    align-items: center;
-    padding: 1.8rem 0;
-    gap: 1.3rem;
+    align-items: stretch;
+    padding: 1.2rem 1.5rem 2rem;
+    gap: 0.5rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.12);
     border-top: 1px solid rgba(0,0,0,0.06);
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
@@ -2643,18 +2711,36 @@ a.whatsapp-float {
   .nav-link {
     color: var(--primary-green, #1E3A34);
     font-size: 0.95rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
   }
 
   .nav-item-dropdown {
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
 
   .nav-item-dropdown > .nav-link {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 0.3rem 1rem;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.6rem 0.5rem;
+    cursor: pointer;
+  }
+
+  .nav-item-dropdown > .nav-link::after {
+    content: '▾';
+    margin-left: auto;
+    font-size: 1rem;
+    transition: transform 0.25s ease;
+  }
+
+  .nav-item-dropdown.mobile-open > .nav-link::after {
+    transform: rotate(180deg);
   }
 
   .safaris-dropdown-menu,
@@ -2665,12 +2751,13 @@ a.whatsapp-float {
     max-width: 100% !important;
     box-shadow: none;
     border: none;
-    border-radius: 0;
-    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
     background: #F8F9F8;
     display: none;
     opacity: 1;
     visibility: visible;
+    margin: 0.4rem 0 0.8rem;
   }
 
   .nav-item-dropdown.mobile-open .safaris-dropdown-menu,
@@ -2691,12 +2778,18 @@ a.whatsapp-float {
 
   .dropdown-package-link {
     font-size: 0.85rem;
-    padding: 0.4rem 0.5rem;
+    padding: 0.5rem 0.5rem;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
   }
 
   .dropdown-simple-link {
     text-align: left;
-    padding: 0.4rem 0.5rem;
+    padding: 0.5rem 0.5rem;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
   }
 
   .safaris-dropdown-footer {
@@ -2708,9 +2801,30 @@ a.whatsapp-float {
 
   .dropdown-view-more-link {
     font-size: 0.85rem;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 0.5rem 0.6rem;
+    padding: 0.6rem;
+    min-height: 44px;
+  }
+
+  .contact-area {
+    padding: 3.5rem 5%;
+  }
+
+  .contact-form-wrapper {
+    padding: 1.8rem 1.25rem;
+    margin-top: 1.8rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .whatsapp-submit-btn {
+    width: 100%;
   }
 
   .main-heading  { font-size: 2.65rem; }
@@ -2730,6 +2844,7 @@ a.whatsapp-float {
     padding: 10px 17px 10px 15px;
     font-size: 0.9rem;
     gap: 8px;
+    min-height: 44px;
   }
 
   .whatsapp-float i,
@@ -2748,11 +2863,34 @@ a.whatsapp-float {
 }
 
 @media (max-width: 576px) {
-  .main-heading    { font-size: clamp(1.85rem, 6.2vw, 2.15rem); line-height: 1.22; }
-  .section-heading { font-size: 1.9rem; }
-  .cta-heading     { font-size: 1.9rem; }
+  body {
+    padding-top: 95px;
+  }
 
-  section { padding: 4.5rem 5%; }
+  .top-bar-container {
+    flex-direction: column;
+    gap: 0.3rem;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .top-contact-info {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.3rem 0.8rem;
+    font-size: 0.74rem;
+  }
+
+  .top-social-links {
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .main-heading    { font-size: clamp(1.85rem, 6.2vw, 2.15rem); line-height: 1.22; }
+  .section-heading { font-size: clamp(1.6rem, 5vw, 1.9rem); }
+  .cta-heading     { font-size: clamp(1.6rem, 5vw, 1.9rem); }
+
+  section { padding: 3.8rem 5%; }
 
   .cards-grid-container,
   .gallery-container,
@@ -2778,8 +2916,12 @@ a.whatsapp-float {
   .destination-button,
   .cta-btn {
     width: 100%;
-    padding: 1rem;
+    padding: 0.95rem;
     text-align: center;
+    min-height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .form-group, .form-submit, input, textarea {
@@ -2789,7 +2931,117 @@ a.whatsapp-float {
   .logo-text { font-size: 1.1rem; }
   .about-tagline { font-size: 1rem; }
 
-  .site-logo, .brand-logo { height: 40px; }
+  .site-logo, .brand-logo { height: 38px; }
+
+  .footer-company-info {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    font-size: 0.86rem;
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 430px) {
+  .main-navbar-bar {
+    padding: 0.5rem 4%;
+  }
+
+  .header-actions {
+    gap: 0.5rem;
+  }
+
+  .nav-inquire-btn {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.74rem;
+    letter-spacing: 0.02em;
+    min-height: 38px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .site-logo, .brand-logo {
+    height: 34px;
+    max-width: 115px;
+  }
+
+  .top-contact-info {
+    font-size: 0.70rem;
+    gap: 0.25rem 0.6rem;
+  }
+
+  .top-contact-item {
+    word-break: break-word;
+  }
+
+  .package-content {
+    padding: 1.4rem 1.1rem;
+  }
+
+  .package-title {
+    font-size: 1.35rem;
+  }
+
+  .safari-editorial-section {
+    padding: 3rem 4% 4rem;
+  }
+
+  .safari-country-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .safari-ed-link {
+    min-height: 44px;
+    padding: 0.7rem 1.2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  body {
+    padding-top: 90px;
+  }
+
+  .top-bar-container {
+    padding: 0.25rem 2%;
+  }
+
+  .top-contact-info {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .top-contact-item {
+    font-size: 0.68rem;
+  }
+
+  .site-logo, .brand-logo {
+    height: 30px;
+    max-width: 95px;
+  }
+
+  .nav-inquire-btn {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.68rem;
+  }
+
+  .header-actions {
+    gap: 0.35rem;
+  }
+
+  .hamburger-menu {
+    min-width: 38px;
+    min-height: 38px;
+    padding: 6px;
+  }
+
+  .hamburger-menu span {
+    width: 24px;
+  }
+
+  .safari-ed-body {
+    padding: 1rem 0.85rem 1.15rem;
+  }
 }
 
 /* ================================================================

@@ -823,3 +823,15 @@
   .dest-faq-section { padding: 3.5rem 5%; }
   .dest-related-section { padding: 3.5rem 5%; }
 }
+
+@media (max-width: 480px) {
+  .dest-hero { min-height: 360px; padding-bottom: 2rem; }
+  .dest-hero-title { font-size: clamp(1.75rem, 7vw, 2.2rem); line-height: 1.2; }
+  .dest-hero-subtitle { font-size: 0.98rem; margin-bottom: 1.5rem; }
+  .btn-hero-book { width: 100%; justify-content: center; min-height: 48px; }
+  .showcase-card img,
+  .showcase-grid-2 .showcase-card:nth-child(2) img,
+  .showcase-card.single-full img { height: 220px; }
+  .quick-facts-panel { padding: 1.2rem 1rem; gap: 1rem; }
+  .faq-question { font-size: 0.96rem; min-height: 46px; }
+}

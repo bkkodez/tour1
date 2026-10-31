@@ -1,4 +1,4 @@
-/* destination.js — Shared JS for all HAK Tours destination pages */
+﻿/* destination.js — Shared JS for all HAK Tours destination pages */
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -16,17 +16,30 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ================================================
-     2. HAMBURGER MENU — mobile toggle
+     2. HAMBURGER MENU & MOBILE DROPDOWNS
   ================================================ */
   const hamburger = document.querySelector('.hamburger-menu');
   const navList   = document.querySelector('.nav-links-list');
+  const navLinks  = document.querySelectorAll('.nav-link');
   if (hamburger && navList) {
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('active');
       navList.classList.toggle('active');
     });
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        const dropdownItem = link.closest('.nav-item-dropdown');
+        if (dropdownItem && window.innerWidth <= 768) {
+          if (!dropdownItem.classList.contains('mobile-open')) {
+            e.preventDefault();
+            document.querySelectorAll('.nav-item-dropdown').forEach(other => {
+              if (other !== dropdownItem) other.classList.remove('mobile-open');
+            });
+            dropdownItem.classList.add('mobile-open');
+            return;
+          }
+        }
         hamburger.classList.remove('active');
         navList.classList.remove('active');
       });
