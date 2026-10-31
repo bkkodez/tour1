@@ -380,37 +380,48 @@ button,
 }
 
 .nav-dropdown-arrow {
-  font-size: 0.7rem;
-  margin-left: 4px;
-  transition: transform 0.25s ease;
+  font-size: 0.72rem;
+  margin-left: 6px;
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
   display: inline-block;
   vertical-align: middle;
+  pointer-events: none;
 }
 
-.nav-item-dropdown:hover .nav-dropdown-arrow {
+.nav-item-dropdown > .nav-link {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Arrow rotation when open */
+.nav-item-dropdown.is-open .nav-dropdown-arrow,
+.nav-item-dropdown.mobile-open .nav-dropdown-arrow {
   transform: rotate(180deg);
 }
 
-/* Base Dropdown Menu (Desktop) */
+/* Base Dropdown Menu (Desktop) — Initially hidden */
 .safaris-dropdown-menu,
 .destinations-dropdown-menu {
   position: absolute;
   top: 100%;
   left: 50%;
-  transform: translateX(-50%) translateY(8px);
+  transform: translateX(-50%) translateY(12px);
   background: #FFFFFF;
   border-radius: var(--radius-card, 12px);
   box-shadow: 0 14px 40px rgba(14, 28, 21, 0.16), 0 2px 8px rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(200, 155, 60, 0.22);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s;
+  transition: opacity 0.32s cubic-bezier(0.16, 1, 0.3, 1), transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.32s ease;
   z-index: 1100;
   pointer-events: none;
 }
 
-.nav-item-dropdown:hover .safaris-dropdown-menu,
-.nav-item-dropdown:hover .destinations-dropdown-menu {
+/* Open State (Desktop/Tablet) via Click */
+.nav-item-dropdown.is-open .safaris-dropdown-menu,
+.nav-item-dropdown.is-open .destinations-dropdown-menu,
+.nav-item-dropdown.mobile-open .safaris-dropdown-menu,
+.nav-item-dropdown.mobile-open .destinations-dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translateX(-50%) translateY(0);
@@ -2728,18 +2739,19 @@ a.whatsapp-float {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 0.6rem 0.5rem;
+    padding: 0.65rem 0.5rem;
     cursor: pointer;
+    user-select: none;
   }
 
-  .nav-item-dropdown > .nav-link::after {
-    content: '▾';
+  .nav-item-dropdown .nav-dropdown-arrow {
     margin-left: auto;
-    font-size: 1rem;
-    transition: transform 0.25s ease;
+    font-size: 0.85rem;
+    transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
   }
 
-  .nav-item-dropdown.mobile-open > .nav-link::after {
+  .nav-item-dropdown.is-open .nav-dropdown-arrow,
+  .nav-item-dropdown.mobile-open .nav-dropdown-arrow {
     transform: rotate(180deg);
   }
 
@@ -2752,17 +2764,28 @@ a.whatsapp-float {
     box-shadow: none;
     border: none;
     border-radius: 8px;
-    padding: 0.8rem 1rem;
+    padding: 0 1rem;
     background: #F8F9F8;
-    display: none;
-    opacity: 1;
-    visibility: visible;
-    margin: 0.4rem 0 0.8rem;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease, padding 0.35s ease, margin 0.35s ease, visibility 0.35s ease;
+    margin: 0;
+    display: block;
   }
 
+  .nav-item-dropdown.is-open .safaris-dropdown-menu,
+  .nav-item-dropdown.is-open .destinations-dropdown-menu,
   .nav-item-dropdown.mobile-open .safaris-dropdown-menu,
   .nav-item-dropdown.mobile-open .destinations-dropdown-menu {
-    display: block;
+    max-height: 1400px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    padding: 0.9rem 1rem;
+    margin: 0.4rem 0 0.8rem;
   }
 
   .safaris-dropdown-grid {
