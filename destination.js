@@ -16,43 +16,58 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ================================================
-     2. NAVBAR DROPDOWNS & ACCORDION (SAFARIS & DESTINATIONS)
-     Click-to-expand accordion functionality across Desktop, Tablet & Mobile
+     2. NAVBAR DROPDOWNS & ARROW TOGGLES (SAFARIS & DESTINATIONS)
+     Independent navigation links & click-to-expand arrow buttons
   ================================================ */
   const dropdownItems = document.querySelectorAll('.nav-item-dropdown');
 
   dropdownItems.forEach(dropdown => {
-    // The toggle heading link containing text + arrow icon
-    const toggleLink = dropdown.querySelector(':scope > .nav-link') || dropdown.querySelector('.nav-link');
-    if (!toggleLink) return;
+    const navLink = dropdown.querySelector(':scope > .nav-link') || dropdown.querySelector('.nav-link');
+    let toggleBtn = dropdown.querySelector('.nav-dropdown-toggle');
 
-    toggleLink.setAttribute('aria-haspopup', 'true');
-    toggleLink.setAttribute('aria-expanded', 'false');
+    // Dynamic fallback / normalization: if arrow is still inside navLink, extract it into a separate button
+    if (!toggleBtn && navLink) {
+      const arrowIcon = navLink.querySelector('.nav-dropdown-arrow');
+      if (arrowIcon) {
+        toggleBtn = document.createElement('button');
+        toggleBtn.type = 'button';
+        toggleBtn.className = 'nav-dropdown-toggle';
+        toggleBtn.setAttribute('aria-label', 'Toggle dropdown menu');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        toggleBtn.appendChild(arrowIcon);
+        navLink.insertAdjacentElement('afterend', toggleBtn);
+      }
+    }
 
-    toggleLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
+    if (toggleBtn) {
+      toggleBtn.setAttribute('aria-haspopup', 'true');
+      toggleBtn.setAttribute('aria-expanded', 'false');
 
-      const isAlreadyOpen = dropdown.classList.contains('is-open');
+      toggleBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
 
-      // Collapse any other open dropdowns (accordion behavior)
-      dropdownItems.forEach(other => {
-        if (other !== dropdown) {
-          other.classList.remove('is-open', 'mobile-open');
-          const otherLink = other.querySelector(':scope > .nav-link') || other.querySelector('.nav-link');
-          if (otherLink) otherLink.setAttribute('aria-expanded', 'false');
+        const isAlreadyOpen = dropdown.classList.contains('is-open');
+
+        // Collapse any other open dropdowns (accordion behavior)
+        dropdownItems.forEach(other => {
+          if (other !== dropdown) {
+            other.classList.remove('is-open', 'mobile-open');
+            const otherBtn = other.querySelector('.nav-dropdown-toggle');
+            if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        // Toggle current dropdown
+        if (isAlreadyOpen) {
+          dropdown.classList.remove('is-open', 'mobile-open');
+          toggleBtn.setAttribute('aria-expanded', 'false');
+        } else {
+          dropdown.classList.add('is-open', 'mobile-open');
+          toggleBtn.setAttribute('aria-expanded', 'true');
         }
       });
-
-      // Toggle current dropdown
-      if (isAlreadyOpen) {
-        dropdown.classList.remove('is-open', 'mobile-open');
-        toggleLink.setAttribute('aria-expanded', 'false');
-      } else {
-        dropdown.classList.add('is-open', 'mobile-open');
-        toggleLink.setAttribute('aria-expanded', 'true');
-      }
-    });
+    }
   });
 
   // Close dropdowns when clicking outside
@@ -60,8 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!e.target.closest('.nav-item-dropdown')) {
       dropdownItems.forEach(dropdown => {
         dropdown.classList.remove('is-open', 'mobile-open');
-        const link = dropdown.querySelector(':scope > .nav-link') || dropdown.querySelector('.nav-link');
-        if (link) link.setAttribute('aria-expanded', 'false');
+        const btn = dropdown.querySelector('.nav-dropdown-toggle');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
       });
     }
   });
@@ -71,8 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') {
       dropdownItems.forEach(dropdown => {
         dropdown.classList.remove('is-open', 'mobile-open');
-        const link = dropdown.querySelector(':scope > .nav-link') || dropdown.querySelector('.nav-link');
-        if (link) link.setAttribute('aria-expanded', 'false');
+        const btn = dropdown.querySelector('.nav-dropdown-toggle');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
       });
     }
   });
@@ -90,18 +105,15 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!isActive) {
         dropdownItems.forEach(dropdown => {
           dropdown.classList.remove('is-open', 'mobile-open');
-          const link = dropdown.querySelector(':scope > .nav-link') || dropdown.querySelector('.nav-link');
-          if (link) link.setAttribute('aria-expanded', 'false');
+          const btn = dropdown.querySelector('.nav-dropdown-toggle');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
         });
       }
     });
 
-    // Close mobile nav when clicking a regular link or submenu item (not dropdown toggles)
+    // Close mobile nav when clicking any link
     navList.querySelectorAll('a').forEach(anchor => {
-      anchor.addEventListener('click', (e) => {
-        if (anchor.matches('.nav-item-dropdown > .nav-link')) {
-          return;
-        }
+      anchor.addEventListener('click', () => {
         hamburger.classList.remove('active');
         navList.classList.remove('active');
       });

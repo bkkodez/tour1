@@ -374,23 +374,47 @@ button,
 
 /* ================================================================
    NAVBAR DROPDOWNS (SAFARIS & DESTINATIONS)
+   Independent navigation link + click-to-expand arrow button
    ================================================================ */
 .nav-item-dropdown {
   position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-dropdown-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 4px 0 2px;
+  margin-left: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-green, #1E3A34);
+  line-height: 1;
+  transition: color 0.2s ease;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.nav-dropdown-toggle:hover,
+.nav-item-dropdown.is-open .nav-dropdown-toggle,
+.nav-item-dropdown.mobile-open .nav-dropdown-toggle {
+  color: var(--gold, #C89B3C);
+}
+
+.nav-dropdown-toggle:focus-visible {
+  outline: 2px solid var(--gold, #C89B3C);
+  outline-offset: 2px;
+  border-radius: 3px;
 }
 
 .nav-dropdown-arrow {
   font-size: 0.72rem;
-  margin-left: 6px;
   transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
   display: inline-block;
-  vertical-align: middle;
   pointer-events: none;
-}
-
-.nav-item-dropdown > .nav-link {
-  cursor: pointer;
-  user-select: none;
 }
 
 /* Arrow rotation when open */
@@ -2731,21 +2755,42 @@ a.whatsapp-float {
 
   .nav-item-dropdown {
     width: 100%;
-    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
   }
 
   .nav-item-dropdown > .nav-link {
+    flex: 1;
+    min-height: 44px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
     padding: 0.65rem 0.5rem;
-    cursor: pointer;
-    user-select: none;
+    border-bottom: none;
   }
 
-  .nav-item-dropdown .nav-dropdown-arrow {
-    margin-left: auto;
+  .nav-dropdown-toggle {
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.65rem 0.8rem;
+    color: var(--primary-green, #1E3A34);
+    font-size: 0.9rem;
+    margin-left: 0;
+  }
+
+  .nav-dropdown-toggle:active {
+    background: rgba(0, 0, 0, 0.04);
+  }
+
+  .nav-dropdown-arrow {
     font-size: 0.85rem;
     transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
   }
@@ -2761,6 +2806,7 @@ a.whatsapp-float {
     transform: none !important;
     width: 100% !important;
     max-width: 100% !important;
+    flex-basis: 100%;
     box-shadow: none;
     border: none;
     border-radius: 8px;
