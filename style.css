@@ -417,12 +417,6 @@ button,
   pointer-events: none;
 }
 
-/* Arrow rotation when open */
-.nav-item-dropdown.is-open .nav-dropdown-arrow,
-.nav-item-dropdown.mobile-open .nav-dropdown-arrow {
-  transform: rotate(180deg);
-}
-
 /* Base Dropdown Menu (Desktop) — Initially hidden */
 .safaris-dropdown-menu,
 .destinations-dropdown-menu {
@@ -441,15 +435,41 @@ button,
   pointer-events: none;
 }
 
-/* Open State (Desktop/Tablet) via Click */
-.nav-item-dropdown.is-open .safaris-dropdown-menu,
-.nav-item-dropdown.is-open .destinations-dropdown-menu,
-.nav-item-dropdown.mobile-open .safaris-dropdown-menu,
-.nav-item-dropdown.mobile-open .destinations-dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(0);
-  pointer-events: auto;
+/* Invisible hover bridge ensuring seamless cursor movement into the dropdown */
+.safaris-dropdown-menu::before,
+.destinations-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 22px;
+  background: transparent;
+}
+
+/* Desktop CSS Hover Trigger (Displays dropdown & rotates arrow on mouse hover) */
+@media (min-width: 769px) {
+  .nav-item-dropdown:hover .safaris-dropdown-menu,
+  .nav-item-dropdown:hover .destinations-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav-item-dropdown:hover .nav-dropdown-arrow {
+    transform: rotate(180deg);
+  }
+
+  .nav-item-dropdown:hover .nav-dropdown-toggle {
+    color: var(--gold, #C89B3C);
+  }
+}
+
+/* Arrow rotation when open on mobile/touch */
+.nav-item-dropdown.is-open .nav-dropdown-arrow,
+.nav-item-dropdown.mobile-open .nav-dropdown-arrow {
+  transform: rotate(180deg);
 }
 
 /* Safaris Mega Dropdown Grid */
