@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -418,10 +418,10 @@
 
           <!-- REQUEST A QUOTE ACTION -->
           <div class="pkg-quote-cta-wrap">
-            <a href="#pkg-enquiry" class="pkg-quote-btn" id="pkg-quote-trigger" role="button" aria-label="Request a Quote for this Safari Package" data-package-title="5 Days Uganda Primate Safari">
+            <a href="contact.html" class="pkg-quote-btn" id="pkg-quote-trigger" role="button" aria-label="Request a Quote for this Safari Package" data-package-title="5 Days Uganda Primate Safari">
               <i class="fa-solid fa-file-invoice-dollar quote-btn-icon" aria-hidden="true"></i>
               <span class="quote-btn-text">REQUEST A QUOTE</span>
-              <i class="fa-solid fa-arrow-down quote-btn-arrow" aria-hidden="true"></i>
+              <i class="fa-solid fa-arrow-right quote-btn-arrow" aria-hidden="true"></i>
             </a>
           </div>
 
@@ -431,95 +431,6 @@
     </main>
 
   </div> <!-- /.pkg-main-frame -->
-
-  <!-- ============================================== -->
-  <!-- 8. ENQUIRY / BOOKING SECTION                    -->
-  <!-- ============================================== -->
-  <section id="pkg-enquiry" class="pkg-enquiry-wrap">
-    <div class="enquiry-inner">
-      <div class="pkg-section-header" style="text-align: center; margin-bottom: 2.2rem;">
-        <span class="pkg-section-badge">Direct Reservation</span>
-        <h2 class="pkg-section-title">Send your enquiry via this form</h2>
-        <p class="pkg-section-desc" style="max-width: 650px; margin: 0.6rem auto 0; color: #555; font-size: 0.95rem;">
-          Fill out your details below and our safari specialists will prepare a customized itinerary and quotation for you within 24 hours.
-        </p>
-      </div>
-
-      <form class="pkg-enquiry-form-v2" id="pkg-enquiry-form" novalidate>
-        <div class="enquiry-form-grid">
-          
-          <div class="enquiry-form-group">
-            <label for="enq-name" class="enquiry-form-label">Full Name <span style="color: #c9302c;">*</span></label>
-            <input type="text" id="enq-name" name="fullName" required placeholder="e.g. John Doe" class="enquiry-form-control">
-            <span class="error-message" id="error-enq-name" style="color: #c9302c; font-size: 0.8rem;"></span>
-          </div>
-
-          <div class="enquiry-form-group">
-            <label for="enq-email" class="enquiry-form-label">Email Address <span style="color: #c9302c;">*</span></label>
-            <input type="email" id="enq-email" name="emailAddress" required placeholder="e.g. john@example.com" class="enquiry-form-control">
-            <span class="error-message" id="error-enq-email" style="color: #c9302c; font-size: 0.8rem;"></span>
-          </div>
-
-          <div class="enquiry-form-group">
-            <label for="enq-phone" class="enquiry-form-label">Phone / WhatsApp Number <span style="color: #c9302c;">*</span></label>
-            <input type="tel" id="enq-phone" name="phoneNumber" required placeholder="e.g. +1 234 567 8900" class="enquiry-form-control">
-            <span class="error-message" id="error-enq-phone" style="color: #c9302c; font-size: 0.8rem;"></span>
-          </div>
-
-          <div class="enquiry-form-group">
-            <label for="enq-country" class="enquiry-form-label">Country of Residence</label>
-            <input type="text" id="enq-country" name="country" placeholder="e.g. United States, Germany, UK" class="enquiry-form-control">
-          </div>
-
-          <div class="enquiry-form-group">
-            <label for="enq-date" class="enquiry-form-label">Preferred Travel Date <span style="color: #c9302c;">*</span></label>
-            <input type="date" id="enq-date" name="travelDate" required class="enquiry-form-control">
-            <span class="error-message" id="error-enq-date" style="color: #c9302c; font-size: 0.8rem;"></span>
-          </div>
-
-          <div class="enquiry-form-group">
-            <label for="enq-guests" class="enquiry-form-label">Number of Guests</label>
-            <select id="enq-guests" name="guests" class="enquiry-form-control">
-              <option value="1 Adult">1 Adult (Solo Traveler)</option>
-              <option value="2 Adults" selected>2 Adults (Couple / Pair)</option>
-              <option value="3-4 Adults">3 - 4 Adults (Small Group)</option>
-              <option value="5+ Adults">5+ Adults (Group / Family)</option>
-            </select>
-          </div>
-          <div class="enquiry-form-group">
-            <label for="enq-budget" class="enquiry-form-label">Estimated Safari Budget (USD)</label>
-            <select id="enq-budget" name="safariBudget" class="enquiry-form-control">
-              <option value="" disabled selected>Select your budget</option>
-              <option value="$0 – $1,000">$0 – $1,000</option>
-              <option value="$1,001 – $2,000">$1,001 – $2,000</option>
-              <option value="$2,001 – $3,000">$2,001 – $3,000</option>
-              <option value="$3,001 – $4,000">$3,001 – $4,000</option>
-              <option value="$4,001 – $5,000">$4,001 – $5,000</option>
-              <option value="$5,000 and above">$5,000 and above</option>
-            </select>
-          </div>
-
-          <div class="enquiry-form-group full-width">
-            <label for="enq-package" class="enquiry-form-label">Selected Safari Package</label>
-            <input type="text" id="enq-package" name="package" readonly value="5 Days Uganda Primate Safari" class="enquiry-form-control" style="background-color: #f4f1ea; font-weight: 600; color: #174C39;">
-          </div>
-
-          <div class="enquiry-form-group full-width">
-            <label for="enq-message" class="enquiry-form-label">Special Requests / Safari Details <span style="color: #c9302c;">*</span></label>
-            <textarea id="enq-message" name="tripDescription" rows="4" required placeholder="Please let us know your preferred accommodation category (luxury, mid-range, budget), any dietary requirements, or custom requests..." class="enquiry-form-control"></textarea>
-            <span class="error-message" id="error-enq-message" style="color: #c9302c; font-size: 0.8rem;"></span>
-          </div>
-
-        </div>
-
-        <div class="enquiry-submit-wrap">
-          <button type="submit" class="enquiry-submit-btn">
-            <i class="fa-brands fa-whatsapp"></i> Send Safari Enquiry
-          </button>
-        </div>
-      </form>
-    </div>
-  </section>
 
   <!-- ============================================== -->
   <!-- FOOTER SECTION                                 -->
@@ -592,89 +503,6 @@
   <!-- Dedicated Package Navigation Script -->
   <script src="package-nav.js"></script>
 
-  <!-- Package Enquiry Validation Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var enquiryForm = document.getElementById('pkg-enquiry-form');
-      if (enquiryForm) {
-        enquiryForm.addEventListener('submit', function(e) {
-          e.preventDefault();
-          
-          var nameInput = document.getElementById('enq-name');
-          var emailInput = document.getElementById('enq-email');
-          var phoneInput = document.getElementById('enq-phone');
-          var dateInput = document.getElementById('enq-date');
-          var messageInput = document.getElementById('enq-message');
-          var countryInput = document.getElementById('enq-country');
-          var guestsInput = document.getElementById('enq-guests');
-          var budgetInput = document.getElementById('enq-budget');
-          var packageInput = document.getElementById('enq-package');
 
-          var isValid = true;
-
-          ['error-enq-name', 'error-enq-email', 'error-enq-phone', 'error-enq-date', 'error-enq-message'].forEach(function(id) {
-            var el = document.getElementById(id);
-            if (el) el.textContent = '';
-          });
-
-          if (!nameInput.value.trim()) {
-            document.getElementById('error-enq-name').textContent = 'Please enter your full name.';
-            isValid = false;
-          }
-
-          var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          if (!emailInput.value.trim() || !emailRegex.test(emailInput.value.trim())) {
-            document.getElementById('error-enq-email').textContent = 'Please enter a valid email address.';
-            isValid = false;
-          }
-
-          var phoneRegex = /^[+]?[(]?[0-9]{1,4}[)]?[-\s./0-9]*$/;
-          if (!phoneInput.value.trim() || !phoneRegex.test(phoneInput.value.trim()) || phoneInput.value.trim().length < 7) {
-            document.getElementById('error-enq-phone').textContent = 'Please enter a valid phone number.';
-            isValid = false;
-          }
-
-          if (!dateInput.value) {
-            document.getElementById('error-enq-date').textContent = 'Please select your preferred travel date.';
-            isValid = false;
-          }
-
-          if (!messageInput.value.trim()) {
-            document.getElementById('error-enq-message').textContent = 'Please share your travel preferences or questions.';
-            isValid = false;
-          }
-
-          if (isValid) {
-            var packageName = packageInput ? packageInput.value : document.title;
-            var rawMsg = 'Hello Horizon Tours and Travel,\n\n' +
-              'I would like to enquire about: ' + packageName + '\n\n' +
-              'Full Name: ' + nameInput.value.trim() + '\n' +
-              'Email: ' + emailInput.value.trim() + '\n' +
-              'Phone / WhatsApp: ' + phoneInput.value.trim() + '\n' +
-              'Country: ' + (countryInput && countryInput.value.trim() ? countryInput.value.trim() : 'Not specified') + '\n' +
-              'Preferred Travel Date: ' + dateInput.value + '\n' +
-              'Number of Guests: ' + (guestsInput ? guestsInput.value : '2 Adults') + '\nEstimated Safari Budget (USD): ' + (budgetInput && budgetInput.value ? budgetInput.value : 'Not specified') + '\n\n' +
-              'Special Requests / Notes:\n' + messageInput.value.trim() + '\n\n' +
-              'Please get back to me with a detailed quotation and availability. Thank you!';
-
-            var whatsappUrl = 'https://wa.me/256755899925?text=' + encodeURIComponent(rawMsg);
-            window.open(whatsappUrl, '_blank');
-            enquiryForm.reset();
-          }
-        });
-      }
-
-      var quoteBtn = document.getElementById('pkg-quote-trigger');
-      if (quoteBtn) {
-        quoteBtn.addEventListener('click', function(e) {
-          e.preventDefault();
-          var target = document.getElementById('pkg-enquiry');
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-          }
-        });
-      }
-    });
-  </script>
 </body>
 </html>
