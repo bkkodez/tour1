@@ -504,6 +504,18 @@
               <option value="5+ Adults">5+ Adults (Group / Family)</option>
             </select>
           </div>
+          <div class="enquiry-form-group">
+            <label for="enq-budget" class="enquiry-form-label">Estimated Safari Budget (USD)</label>
+            <select id="enq-budget" name="safariBudget" class="enquiry-form-control">
+              <option value="" disabled selected>Select your budget</option>
+              <option value="$0 – $1,000">$0 – $1,000</option>
+              <option value="$1,001 – $2,000">$1,001 – $2,000</option>
+              <option value="$2,001 – $3,000">$2,001 – $3,000</option>
+              <option value="$3,001 – $4,000">$3,001 – $4,000</option>
+              <option value="$4,001 – $5,000">$4,001 – $5,000</option>
+              <option value="$5,000 and above">$5,000 and above</option>
+            </select>
+          </div>
 
           <div class="enquiry-form-group full-width">
             <label for="enq-package" class="enquiry-form-label">Selected Safari Package</label>
@@ -613,6 +625,7 @@
           var messageInput = document.getElementById('enq-message');
           var countryInput = document.getElementById('enq-country');
           var guestsInput = document.getElementById('enq-guests');
+          var budgetInput = document.getElementById('enq-budget');
           var packageInput = document.getElementById('enq-package');
 
           var isValid = true;
@@ -658,7 +671,7 @@
               'Phone / WhatsApp: ' + phoneInput.value.trim() + '\n' +
               'Country: ' + (countryInput && countryInput.value.trim() ? countryInput.value.trim() : 'Not specified') + '\n' +
               'Preferred Travel Date: ' + dateInput.value + '\n' +
-              'Number of Guests: ' + (guestsInput ? guestsInput.value : '2 Adults') + '\n\n' +
+              'Number of Guests: ' + (guestsInput ? guestsInput.value : '2 Adults') + '\nEstimated Safari Budget (USD): ' + (budgetInput && budgetInput.value ? budgetInput.value : 'Not specified') + '\n\n' +
               'Special Requests / Notes:\n' + messageInput.value.trim() + '\n\n' +
               'Please get back to me with a detailed quotation and availability. Thank you!';
 
