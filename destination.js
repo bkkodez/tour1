@@ -1,4 +1,4 @@
-﻿/* destination.js — Shared JS for all HAK Tours destination pages */
+﻿/* destination.js — Shared JS for all Roots East Africa Adventure destination pages */
 
 document.addEventListener('DOMContentLoaded', () => {
 

@@ -734,7 +734,7 @@
             
             if (isValid) {
                 // Construct WhatsApp Message exactly as required
-                const rawMessage = `Hello Uganda Safari,\n\nI would like to make a tour enquiry.\n\nName: ${nameField.value.trim()}\nPhone: ${phoneField.value.trim()}\nEmail: ${emailField.value.trim()}\nPreferred Travel Date: ${dateField.value}\nEstimated Safari Budget (USD): ${budgetField && budgetField.value ? budgetField.value : "Not specified"}\n\nTrip Description:\n${descField.value.trim()}\n\nPlease get back to me with more information. Thank you.`;
+                const rawMessage = `Hello Roots East Africa Adventure,\n\nI would like to make a tour enquiry.\n\nName: ${nameField.value.trim()}\nPhone: ${phoneField.value.trim()}\nEmail: ${emailField.value.trim()}\nPreferred Travel Date: ${dateField.value}\nEstimated Safari Budget (USD): ${budgetField && budgetField.value ? budgetField.value : "Not specified"}\n\nTrip Description:\n${descField.value.trim()}\n\nPlease get back to me with more information. Thank you.`;
                 
                 const encodedMessage = encodeURIComponent(rawMessage);
                 const whatsappUrl = `https://wa.me/256755899925?text=${encodedMessage}`;

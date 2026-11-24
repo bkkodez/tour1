@@ -1,6 +1,6 @@
 ﻿/* ================================================================
    DESTINATION PAGES — SHARED EDITORIAL MAGAZINE STYLESHEET
-   Horizon Tours and Travel  |  Luxury African Safari Brand
+   Roots East Africa Adventure  |  Luxury African Safari Brand
    Requires: style.css (loaded first in HTML)
    ================================================================ */
 
@@ -47,16 +47,25 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+  /* Enhanced brightness, clarity, and vivid natural colors */
+  filter: brightness(1.08) contrast(1.04) saturate(1.08);
+}
+
+.dest-hero-img[src*="gorila.jpg"],
+.dest-hero-img[src*="chimp"],
+.dest-hero-img[src*="layan.jpg"] {
+  filter: brightness(1.12) contrast(1.05) saturate(1.08);
 }
 
 .dest-hero-overlay {
   position: absolute;
   inset: 0;
+  /* Reduced overlay opacity: keeps hero photograph bright, clear and vivid while maintaining excellent text readability */
   background: linear-gradient(
     to top,
-    rgba(10, 32, 23, 0.94) 0%,
-    rgba(10, 32, 23, 0.55) 50%,
-    rgba(10, 32, 23, 0.25) 100%
+    rgba(10, 32, 23, 0.58) 0%,
+    rgba(10, 32, 23, 0.20) 50%,
+    rgba(10, 32, 23, 0.10) 100%
   );
   z-index: 1;
 }

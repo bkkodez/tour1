@@ -1,5 +1,5 @@
-/**
- * HORIZON TOURS AND TRAVEL — PACKAGE DETAIL PAGE INTERACTION
+﻿/**
+ * ROOTS EAST AFRICA ADVENTURE — PACKAGE DETAIL PAGE INTERACTION
  * Premium 3-Tab Navigation, Moving Gold Indicator & Scroll-Spy
  */
 
