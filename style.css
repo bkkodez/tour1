@@ -1,10 +1,10 @@
-﻿/* ================================================================
+/* ================================================================
    Roots East Africa Adventure — PREMIUM SAFARI STYLESHEET
    Brand Refresh: Luxury African Safari
    ================================================================ */
 
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 /* ================================================================
    CSS CUSTOM PROPERTIES — NEW SAFARI PALETTE
@@ -640,10 +640,11 @@ button,
 }
 
 /* ================================================================
-   HERO SECTION
+   HERO SECTION — FULL-WIDTH IMAGE SLIDESHOW
+   Clean, photography-dominated, natural proportions, subtle arrows
    ================================================================ */
 .home-hero-area {
-  height: 620px;
+  height: clamp(540px, 72vh, 760px);
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -657,7 +658,6 @@ button,
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   position: relative;
 }
 
@@ -675,11 +675,12 @@ button,
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   opacity: 0;
   pointer-events: none;
   transition: opacity 1.0s ease-in-out;
   /* Enhanced brightness, clarity, and natural color vibrancy */
-  filter: brightness(1.08) contrast(1.04) saturate(1.08);
+  filter: brightness(1.06) contrast(1.04) saturate(1.06);
 }
 
 .hero-slide.active {
@@ -689,7 +690,7 @@ button,
 
 /* Specific exposure balancing for shadow-heavy hero photographs */
 .hero-slide[src*="gor.jpg"] {
-  filter: brightness(1.18) contrast(1.05) saturate(1.08);
+  filter: brightness(1.16) contrast(1.05) saturate(1.08);
 }
 
 .hero-slide[src*="murchisonfalls.jpg"] {
@@ -705,79 +706,80 @@ button,
 }
 
 .slider-overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  width: 100%;
-  height: 100%;
-  /* Reduced overlay opacity: keeps hero images bright, vivid and clearly visible */
-  background: linear-gradient(
-    to bottom,
-    rgba(12, 28, 20, 0.22) 0%,
-    rgba(12, 28, 20, 0.10) 35%,
-    rgba(12, 28, 20, 0.16) 65%,
-    rgba(12, 28, 20, 0.36) 100%
-  );
-  z-index: 2;
-  pointer-events: none;
+  display: none;
 }
 
-/* Slider nav controls */
+/* Slider nav controls — Subtle, professional, visible left/right arrows */
 .slider-nav,
 #slider-prev,
 #slider-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  color: var(--white);
-  border: none;
-  font-size: 1.6rem;
-  padding: 0.9rem 1.1rem;
+  background: rgba(14, 45, 32, 0.42);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  width: 48px;
+  height: 48px;
+  font-size: 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   z-index: 10;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.25s ease, transform 0.25s ease, color 0.25s ease;
+  opacity: 0.85;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.3s ease, background-color 0.25s ease, transform 0.25s ease, color 0.25s ease, border-color 0.25s ease;
   border-radius: 50%;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
 }
 
 .slider-nav.prev,
 #slider-prev {
-  left: 24px;
+  left: 28px;
 }
 
 .slider-nav.next,
 #slider-next {
-  right: 24px;
+  right: 28px;
 }
 
-/* Make both navigation arrows visible on hover over hero container */
 .hero-banner-container:hover .slider-nav,
 .home-hero-area:hover .slider-nav,
 .hero-banner-container:hover #slider-prev,
 .hero-banner-container:hover #slider-next {
   opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
 }
 
-.slider-nav:hover {
-  background: rgba(201,154,46,0.85);
-  color: var(--white);
-  transform: translateY(-50%) scale(1.05);
+.slider-nav:hover,
+#slider-prev:hover,
+#slider-next:hover {
+  background: var(--safari-gold, #C99A2E);
+  color: var(--primary-green, #174A35);
+  border-color: var(--safari-gold, #C99A2E);
+  opacity: 1;
+  transform: translateY(-50%) scale(1.08);
 }
 
-/* Keep controls accessible on touchscreens where hover is unavailable */
-@media (hover: none), (pointer: coarse) {
+@media (max-width: 768px) {
   .slider-nav,
   #slider-prev,
   #slider-next {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+    background: rgba(14, 45, 32, 0.5);
+  }
+  .slider-nav.prev,
+  #slider-prev {
+    left: 14px;
+  }
+  .slider-nav.next,
+  #slider-next {
+    right: 14px;
   }
 }
 
@@ -899,6 +901,268 @@ button,
   gap: 1.2rem;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+/* ================================================================
+   HERO INTRODUCTORY CONTENT SECTION (BELOW HERO SLIDESHOW)
+   Artistic, Authentic East African Safari Editorial Composition
+   ================================================================ */
+.hero-intro-section {
+  background: #FAF7F0;
+  position: relative;
+  border-top: 3px solid rgba(201, 154, 46, 0.4);
+  border-bottom: 1px solid rgba(23, 74, 53, 0.08);
+  padding: 4.8rem 5% 4.4rem;
+  overflow: hidden;
+}
+
+.hero-intro-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -5%;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(201, 154, 46, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-intro-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-intro-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  gap: 3.5rem 4.5rem;
+  align-items: center;
+}
+
+/* --- Left Column: Badges & Headings --- */
+.hero-intro-lead-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-intro-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: rgba(201, 154, 46, 0.12);
+  border: 1px solid rgba(201, 154, 46, 0.4);
+  padding: 0.42rem 1.05rem;
+  border-radius: 50px;
+  width: fit-content;
+  margin-bottom: 1.1rem;
+}
+
+.intro-badge-icon {
+  color: var(--safari-gold, #C99A2E);
+  font-size: 0.85rem;
+}
+
+.intro-badge-text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  color: var(--primary-green, #174A35);
+}
+
+.hero-intro-heading {
+  font-family: 'Shantell Sans', cursive, sans-serif;
+  font-size: clamp(2.15rem, 3.8vw, 3.15rem);
+  font-weight: 700;
+  color: var(--primary-green, #174A35);
+  line-height: 1.2;
+  margin: 0 0 1.2rem;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+.intro-heading-accent {
+  color: var(--safari-gold, #C99A2E);
+}
+
+.hero-intro-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.3rem;
+  width: 100%;
+  max-width: 320px;
+}
+
+.divider-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(to right, rgba(201, 154, 46, 0.6), rgba(23, 74, 53, 0.15));
+}
+
+.divider-symbol {
+  color: var(--safari-gold, #C99A2E);
+  font-size: 0.9rem;
+  transform: rotate(-35deg);
+}
+
+.hero-intro-lead {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.12rem;
+  color: #384A41;
+  line-height: 1.75;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* --- Right Column: Narrative Story & Experiential Pillars --- */
+.hero-intro-story-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  background: #ffffff;
+  padding: 2.4rem 2.6rem;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(23, 74, 53, 0.05);
+  border: 1px solid rgba(201, 154, 46, 0.22);
+  position: relative;
+}
+
+.hero-intro-story {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.02rem;
+  color: #4A4A4A;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.hero-intro-story strong {
+  color: var(--primary-green, #174A35);
+  font-weight: 600;
+}
+
+.hero-intro-pillars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.intro-pillar-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(23, 74, 53, 0.06);
+  border: 1px solid rgba(201, 154, 46, 0.3);
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--primary-green, #174A35);
+  transition: all 0.25s ease;
+}
+
+.intro-pillar-chip i {
+  color: var(--safari-gold, #C99A2E);
+  font-size: 0.88rem;
+}
+
+.intro-pillar-chip:hover {
+  background: rgba(201, 154, 46, 0.15);
+  border-color: var(--safari-gold, #C99A2E);
+  transform: translateY(-2px);
+}
+
+.hero-intro-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.4rem;
+}
+
+.intro-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: var(--safari-gold, #C99A2E);
+  color: var(--primary-green, #174A35);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  padding: 0.8rem 1.6rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(201, 154, 46, 0.28);
+}
+
+.intro-btn-primary:hover {
+  background: #B38622;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(201, 154, 46, 0.38);
+}
+
+.intro-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: transparent;
+  color: var(--primary-green, #174A35);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  padding: 0.78rem 1.45rem;
+  border-radius: 50px;
+  text-decoration: none;
+  border: 1.5px solid rgba(23, 74, 53, 0.25);
+  transition: all 0.3s ease;
+}
+
+.intro-btn-secondary:hover {
+  border-color: var(--primary-green, #174A35);
+  background: rgba(23, 74, 53, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Responsive Rules for Hero Intro */
+@media (max-width: 991px) {
+  .hero-intro-section {
+    padding: 3.8rem 5% 3.4rem;
+  }
+  .hero-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 2.8rem;
+  }
+  .hero-intro-heading {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-intro-section {
+    padding: 3rem 5% 2.8rem;
+  }
+  .hero-intro-heading {
+    font-size: 1.9rem;
+  }
+  .hero-intro-story-col {
+    padding: 1.8rem 1.4rem;
+  }
+  .hero-intro-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .intro-btn-primary,
+  .intro-btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* ================================================================
@@ -2724,7 +2988,7 @@ a.whatsapp-float {
 }
 
 @media (max-width: 991px) {
-  .home-hero-area  { height: 520px; }
+  .home-hero-area  { height: clamp(440px, 60vh, 560px); }
   .main-heading    { font-size: 3.25rem; }
   .section-heading { font-size: 2.4rem; }
   .main-navbar-bar { padding: 1.05rem 5%; }
@@ -2741,7 +3005,7 @@ a.whatsapp-float {
   }
 
   .home-hero-area {
-    height: 420px;
+    height: clamp(380px, 54vh, 480px);
     margin-top: 0;
   }
 
@@ -2995,6 +3259,10 @@ a.whatsapp-float {
 @media (max-width: 576px) {
   body {
     padding-top: 115px;
+  }
+
+  .home-hero-area {
+    height: clamp(320px, 46vh, 400px);
   }
 
   .top-bar-container {

@@ -1,6 +1,8 @@
-﻿/* ================================================================
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* ================================================================
    ABOUT US PAGE — ROOTS EAST AFRICAN ADVENTURE
-   Modern, Premium, Editorial Safari Style
+   Modern, Authentic, Editorial East African Safari Style
    ================================================================ */
 
 /* ----------------------------------------------------------------
@@ -30,7 +32,7 @@
 }
 
 .about-section-heading {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Shantell Sans', cursive, sans-serif;
   font-size: clamp(2rem, 3.4vw, 2.75rem);
   font-weight: 700;
   color: var(--primary-green, #174A35);
@@ -105,26 +107,8 @@
   z-index: 2;
 }
 
-.about-hero-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: 'Outfit', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #F7F3E8;
-  background: rgba(201, 154, 46, 0.28);
-  border: 1px solid rgba(201, 154, 46, 0.5);
-  backdrop-filter: blur(6px);
-  padding: 0.4rem 1.1rem;
-  border-radius: 50px;
-  margin-bottom: 0.9rem;
-}
-
 .about-hero-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Shantell Sans', cursive, sans-serif;
   font-size: clamp(2.4rem, 5vw, 3.8rem);
   font-weight: 700;
   color: #ffffff;
@@ -192,7 +176,7 @@
 }
 
 .highlight-value {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--primary-green, #174A35);
@@ -310,9 +294,9 @@
 }
 
 .badge-num {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--safari-gold, #C99A2E);
   line-height: 1;
 }
@@ -327,136 +311,7 @@
 }
 
 /* ----------------------------------------------------------------
-   5. WHAT WE DO SECTION
-   ---------------------------------------------------------------- */
-.about-what-we-do-section {
-  padding: 6.5rem 0;
-  background: var(--ivory, #F7F3E8);
-}
-
-.what-we-do-showcase {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.2rem;
-}
-
-.experience-showcase-item {
-  background: #ffffff;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 12px 35px rgba(23, 74, 53, 0.05);
-  border: 1px solid rgba(201, 154, 46, 0.18);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.experience-showcase-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 45px rgba(23, 74, 53, 0.12);
-}
-
-.experience-media-wrap {
-  position: relative;
-  height: 250px;
-  overflow: hidden;
-}
-
-.experience-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.6s ease;
-}
-
-.experience-showcase-item:hover .experience-img {
-  transform: scale(1.06);
-}
-
-.experience-num {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: rgba(23, 74, 53, 0.88);
-  backdrop-filter: blur(4px);
-  border: 1px solid var(--safari-gold, #C99A2E);
-  color: var(--safari-gold, #C99A2E);
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: 0.95rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.experience-content {
-  padding: 2rem 1.8rem 2.2rem;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.experience-category {
-  font-family: 'Outfit', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--safari-gold, #C99A2E);
-  margin-bottom: 0.5rem;
-}
-
-.experience-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.55rem;
-  font-weight: 700;
-  color: var(--primary-green, #174A35);
-  margin: 0 0 0.9rem;
-  line-height: 1.25;
-}
-
-.experience-description {
-  font-family: 'Outfit', sans-serif;
-  font-size: 0.96rem;
-  color: #555555;
-  line-height: 1.7;
-  margin: 0 0 1.5rem;
-  flex: 1;
-}
-
-.experience-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: 'Outfit', sans-serif;
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--primary-green, #174A35);
-  transition: color 0.25s ease, transform 0.25s ease;
-  margin-top: auto;
-}
-
-.experience-link i {
-  color: var(--safari-gold, #C99A2E);
-  transition: transform 0.25s ease;
-}
-
-.experience-link:hover {
-  color: var(--safari-gold, #C99A2E);
-}
-
-.experience-link:hover i {
-  transform: translateX(4px);
-}
-
-/* ----------------------------------------------------------------
-   6. WHY CHOOSE ROOTS EAST AFRICAN ADVENTURE?
+   4. WHY CHOOSE ROOTS EAST AFRICAN ADVENTURE?
    ---------------------------------------------------------------- */
 .about-why-choose-section {
   padding: 6.5rem 0;
@@ -521,8 +376,8 @@
 }
 
 .caption-quote {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
   font-weight: 600;
   font-style: italic;
   line-height: 1.45;
@@ -566,8 +421,8 @@
 }
 
 .reason-heading {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.18rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--primary-green, #174A35);
   margin: 0 0 0.4rem;
@@ -583,7 +438,7 @@
 }
 
 /* ----------------------------------------------------------------
-   7. MEET THE PERSON BEHIND THE JOURNEY (DIRECTOR & CO-FOUNDER)
+   5. MEET THE PERSON BEHIND THE JOURNEY (DIRECTOR & CO-FOUNDER)
    ---------------------------------------------------------------- */
 .about-director-section {
   padding: 6.5rem 0;
@@ -638,8 +493,8 @@
 }
 
 .badge-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.25rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #ffffff;
   display: block;
@@ -663,9 +518,9 @@
 }
 
 .director-name {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 1.85rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--primary-green, #174A35);
   margin: 0 0 0.3rem;
   line-height: 1.2;
@@ -673,7 +528,7 @@
 
 .director-designation {
   font-family: 'Outfit', sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -707,9 +562,10 @@
 }
 
 .quote-text {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.08rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
   font-style: italic;
+  font-weight: 500;
   color: var(--primary-green, #174A35);
   line-height: 1.6;
   margin: 0 0 0.6rem;
@@ -727,7 +583,7 @@
 }
 
 /* ----------------------------------------------------------------
-   8. FINAL CALL-TO-ACTION (CTA)
+   6. FINAL CALL-TO-ACTION (CTA)
    ---------------------------------------------------------------- */
 .about-cta-section {
   padding: 2rem 4rem 6rem;
@@ -777,7 +633,7 @@
 }
 
 .about-cta-heading {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Shantell Sans', cursive, sans-serif;
   font-size: clamp(2.1rem, 4vw, 3.1rem);
   font-weight: 700;
   color: #ffffff;
@@ -946,19 +802,9 @@
   }
 
   .about-story-section,
-  .about-what-we-do-section,
   .about-why-choose-section,
   .about-director-section {
     padding: 4.5rem 0;
-  }
-
-  .what-we-do-showcase {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .experience-media-wrap {
-    height: 220px;
   }
 
   .why-reasons-grid {
@@ -1012,11 +858,6 @@
   .about-hero-wrap {
     min-height: 250px;
     border-radius: 10px;
-  }
-
-  .about-hero-eyebrow {
-    font-size: 0.68rem;
-    padding: 0.35rem 0.8rem;
   }
 
   .about-hero-title {

@@ -6,6 +6,9 @@
     <title>Home | Roots East African Adventure</title>
     
     <link rel="icon" href="images/logo x.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome for WhatsApp Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -127,44 +130,105 @@
     </header>
 
     <!-- ============================================== -->
-    <!-- 2. HERO SECTION                                -->
+    <!-- 2. HERO SLIDESHOW SECTION                      -->
     <!-- ============================================== -->
-    <section id="hero-section" class="home-hero-area">
+    <section id="hero-section" class="home-hero-area" aria-label="East African Safari Slideshow">
         
         <!-- Hero Image Container -->
         <div id="hero-image-container" class="hero-banner-container">
             
-            <!-- Hero Watermark Branding -->
-
-            
             <!-- Slideshow Images -->
             <div class="hero-slider">
-                <img src="images/P.jpg" class="hero-slide active" alt="Gorilla Safari">
-                <img src="images/layan.jpg" class="hero-slide" alt="Lion Safari">
-                <img src="images/N.jpg" class="hero-slide" alt="Uganda Landscape">
-                <img src="images/Akageranp.png" class="hero-slide" alt="Uganda Safari">
-                <img src="images/sunfall.jpg" class="hero-slide" alt="Sunset Falls">
-                <img src="images/murchisonfalls.jpg" class="hero-slide" alt="Murchison Falls">
-                <img src="images/gor.jpg" class="hero-slide" alt="Gorilla">
+                <img src="images/P.jpg" class="hero-slide active" alt="Gorilla Safari in Uganda and Rwanda">
+                <img src="images/layan.jpg" class="hero-slide" alt="African Lion Safari Expedition">
+                <img src="images/N.jpg" class="hero-slide" alt="East African Wildlife Landscape">
+                <img src="images/Akageranp.png" class="hero-slide" alt="Akagera Safari Experience">
+                <img src="images/sunfall.jpg" class="hero-slide" alt="Sunset Falls across African Wilderness">
+                <img src="images/murchisonfalls.jpg" class="hero-slide" alt="Murchison Falls National Park Safari">
+                <img src="images/gor.jpg" class="hero-slide" alt="Mountain Gorilla Encounter in Bwindi">
                 
-                <!-- Subtle Overlay -->
+                <!-- Overlay -->
                 <div class="slider-overlay"></div>
             </div>
 
-            <!-- Navigation Controls -->
-            <button class="slider-nav prev" id="slider-prev">&#10094;</button>
-            <button class="slider-nav next" id="slider-next">&#10095;</button>
-            
-            <div class="hero-content">
-                <h1 class="main-heading" id="hero-heading">DISCOVER <span class="hero-gold-text" style="color: var(--safari-gold, #C99A2E);">THE PEARL OF AFRICA</span><br class="hero-break"> AND BEYOND <span class="hero-nowrap">WITH&nbsp;US</span></h1>
-                <p class="hero-description" id="hero-subtext"> From mountain Gorilla trekking and Big Five safaris to unforgettable Uganda & Rwanda adventures, <span>Roots East Africa Adventures</span> creates affordable journeys tailored around you.    
-                </p>
-                
-               
-            </div>
+            <!-- Subtle Left/Right Navigation Controls -->
+            <button class="slider-nav prev" id="slider-prev" aria-label="Previous Slide">&#10094;</button>
+            <button class="slider-nav next" id="slider-next" aria-label="Next Slide">&#10095;</button>
 
         </div>
 
+    </section>
+
+    <!-- ============================================== -->
+    <!-- 2B. HERO INTRODUCTORY CONTENT SECTION          -->
+    <!-- ============================================== -->
+    <section id="hero-intro-section" class="hero-intro-section" aria-label="Introduction to Roots East African Adventure">
+        <div class="hero-intro-container">
+            <div class="hero-intro-grid">
+                
+                <!-- Left Column: Artistic Eyebrow, Main Heading & Lead -->
+                <div class="hero-intro-lead-col">
+                    <div class="hero-intro-badge">
+                        <span class="intro-badge-icon"><i class="fa-solid fa-compass"></i></span>
+                        <span class="intro-badge-text">AUTHENTIC EAST AFRICAN EXPEDITIONS</span>
+                    </div>
+
+                    <h1 class="hero-intro-heading">
+                        DISCOVER THE PEARL OF AFRICA <span class="intro-heading-accent">AND BEYOND</span> WITH US
+                    </h1>
+
+                    <div class="hero-intro-divider">
+                        <span class="divider-line"></span>
+                        <span class="divider-symbol"><i class="fa-solid fa-feather-pointed"></i></span>
+                        <span class="divider-line"></span>
+                    </div>
+
+                    <p class="hero-intro-lead">
+                        Where ancient rainforests meet endless golden savannahs, and every journey connects you deeply to the living pulse of East Africa.
+                    </p>
+                </div>
+
+                <!-- Right Column: Narrative Story, Experiential Facets & Actions -->
+                <div class="hero-intro-story-col">
+                    <div class="hero-intro-narrative">
+                        <p class="hero-intro-story">
+                            At <strong>Roots East African Adventure</strong>, we curate thoughtful, immersive journeys across <strong>Uganda and Rwanda</strong>. Guided by genuine local expertise and a deep reverence for our homeland, we bring you face-to-face with majestic mountain gorillas, track the Big Five across pristine wilderness, and connect you with the vibrant cultures that make East Africa unforgettable.
+                        </p>
+                    </div>
+
+                    <div class="hero-intro-pillars">
+                        <div class="intro-pillar-chip">
+                            <i class="fa-solid fa-paw"></i>
+                            <span>Gorilla Trekking</span>
+                        </div>
+                        <div class="intro-pillar-chip">
+                            <i class="fa-solid fa-binoculars"></i>
+                            <span>Wildlife Safaris</span>
+                        </div>
+                        <div class="intro-pillar-chip">
+                            <i class="fa-solid fa-mountain-sun"></i>
+                            <span>Uganda &amp; Rwanda</span>
+                        </div>
+                        <div class="intro-pillar-chip">
+                            <i class="fa-solid fa-people-roof"></i>
+                            <span>Cultural Encounters</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-intro-actions">
+                        <a href="safaris.html" class="intro-btn-primary">
+                            <span>Explore Safaris</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="contact.html" class="intro-btn-secondary">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Plan Your Journey</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </section>
 
     <!-- ============================================== -->
