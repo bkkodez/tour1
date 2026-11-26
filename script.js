@@ -1,4 +1,4 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
 
     // ================================================================
     // SAFARI PACKAGES REGISTRY & DYNAMIC NAVIGATION DROPDOWN
