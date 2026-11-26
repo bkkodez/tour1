@@ -82,7 +82,7 @@ body {
   overflow-x: hidden;
   max-width: 100%;
   font-size: 16px;
-  padding-top: 110px;
+  padding-top: 132px;
 }
 
 img, video, picture {
@@ -284,7 +284,7 @@ button,
 .main-navbar-bar {
   background-color: #FFFFFF;
   width: 100%;
-  padding: 0.75rem 5%;
+  padding: 1.15rem 5%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
@@ -310,7 +310,7 @@ button,
 
 .site-logo,
 .brand-logo {
-  height: 52px;
+  height: 85px;
   width: auto;
   object-fit: contain;
   transition: height 0.3s ease;
@@ -318,7 +318,7 @@ button,
 
 .site-header.scrolled .site-logo,
 .site-header.scrolled .brand-logo {
-  height: 48px;
+  height: 55px;
 }
 
 .logo-text {
@@ -334,10 +334,20 @@ button,
   display: none !important;
 }
 
+.navigation-menu {
+  display: flex;
+  align-items: center;
+}
+
 .nav-links-list {
   display: flex;
   align-items: center;
   gap: 1.8rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
 }
 
 .nav-link {
@@ -349,6 +359,8 @@ button,
   letter-spacing: 0.8px;
   text-transform: uppercase;
   transition: color 0.25s ease;
+  display: inline-flex;
+  align-items: center;
 }
 
 .nav-link::after {
@@ -2715,6 +2727,8 @@ a.whatsapp-float {
   .home-hero-area  { height: 520px; }
   .main-heading    { font-size: 3.25rem; }
   .section-heading { font-size: 2.4rem; }
+  .main-navbar-bar { padding: 1.05rem 5%; }
+  .site-logo, .brand-logo { height: 58px; }
   .nav-links-list  { gap: 0.7rem; }
   .nav-link        { font-size: 0.78rem; letter-spacing: 0.3px; }
   .header-actions  { gap: 0.6rem; }
@@ -2723,7 +2737,7 @@ a.whatsapp-float {
 
 @media (max-width: 768px) {
   body {
-    padding-top: 100px;
+    padding-top: 115px;
   }
 
   .home-hero-area {
@@ -2746,7 +2760,12 @@ a.whatsapp-float {
 
   .main-navbar-bar {
     position: relative;
-    padding: 0.6rem 5%;
+    padding: 0.85rem 5%;
+  }
+
+  .site-logo,
+  .brand-logo {
+    height: 52px;
   }
 
   .main-navbar-container {
@@ -2767,7 +2786,7 @@ a.whatsapp-float {
     top: 100%;
     left: 0;
     width: 100%;
-    max-height: calc(100vh - 80px);
+    max-height: calc(100vh - 100px);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     background: #FFFFFF;
@@ -2975,7 +2994,7 @@ a.whatsapp-float {
 
 @media (max-width: 576px) {
   body {
-    padding-top: 95px;
+    padding-top: 115px;
   }
 
   .top-bar-container {
@@ -2995,6 +3014,10 @@ a.whatsapp-float {
   .top-social-links {
     justify-content: center;
     gap: 0.8rem;
+  }
+
+  .main-navbar-bar {
+    padding: 0.75rem 5%;
   }
 
   .main-heading    { font-size: clamp(1.85rem, 6.2vw, 2.15rem); line-height: 1.22; }
@@ -3042,7 +3065,7 @@ a.whatsapp-float {
   .logo-text { font-size: 1.1rem; }
   .about-tagline { font-size: 1rem; }
 
-  .site-logo, .brand-logo { height: 38px; }
+  .site-logo, .brand-logo { height: 44px; }
 
   .footer-company-info {
     word-break: break-word;
@@ -3054,7 +3077,7 @@ a.whatsapp-float {
 
 @media (max-width: 430px) {
   .main-navbar-bar {
-    padding: 0.5rem 4%;
+    padding: 0.65rem 4%;
   }
 
   .header-actions {
@@ -3071,8 +3094,8 @@ a.whatsapp-float {
   }
 
   .site-logo, .brand-logo {
-    height: 34px;
-    max-width: 115px;
+    height: 40px;
+    max-width: 135px;
   }
 
   .top-contact-info {
@@ -3110,7 +3133,7 @@ a.whatsapp-float {
 
 @media (max-width: 360px) {
   body {
-    padding-top: 90px;
+    padding-top: 105px;
   }
 
   .top-bar-container {
@@ -3126,9 +3149,13 @@ a.whatsapp-float {
     font-size: 0.68rem;
   }
 
+  .main-navbar-bar {
+    padding: 0.6rem 3.5%;
+  }
+
   .site-logo, .brand-logo {
-    height: 30px;
-    max-width: 95px;
+    height: 35px;
+    max-width: 110px;
   }
 
   .nav-inquire-btn {

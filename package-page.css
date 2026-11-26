@@ -200,7 +200,7 @@
    ================================================================ */
 .pkg-section-nav-wrapper {
   position: sticky;
-  top: 92px; /* Clears fixed site header */
+  top: 112px; /* Clears fixed site header */
   z-index: 100;
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(14px);
@@ -277,7 +277,7 @@
 /* Mobile responsive navigation */
 @media (max-width: 860px) {
   .pkg-section-nav-wrapper {
-    top: 76px;
+    top: 92px;
   }
   .pkg-nav-tabs {
     justify-content: flex-start;
