@@ -8,7 +8,7 @@
    SHARED LABEL / EYEBROW
    ---------------------------------------------------------------- */
 .about-label {
-  font-family: "Outfit", sans-serif;
+  font-family: 'Shantell Sans', 'Shatell Sans', cursive, sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 3.5px;
@@ -102,7 +102,7 @@
 }
 
 .about-text-heading {
-  font-family: "Playfair Display", serif;
+  font-family: 'Shantell Sans', 'Shatell Sans', cursive, sans-serif;
   font-size: clamp(2rem, 3.5vw, 2.8rem);
   font-weight: 700;
   color: var(--primary-green, #174A35);
@@ -240,7 +240,7 @@
 
 /* ---- Director Text ---- */
 .about-director-heading {
-  font-family: "Playfair Display", serif;
+  font-family: 'Shantell Sans', 'Shatell Sans', cursive, sans-serif;
   font-size: clamp(1.6rem, 2.8vw, 2.2rem);
   font-weight: 700;
   color: var(--primary-green, #174A35);
